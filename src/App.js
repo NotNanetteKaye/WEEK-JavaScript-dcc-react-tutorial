@@ -1,26 +1,13 @@
 import React, { useState } from 'react';
+import DisplayEntries from './Components/DisplayEntries/DisplayEntries'
 
 function App() {
 
-  const [entries, setEntries] = useState([{weight: 175, date: '9-21-2022'}])
+  const [entries, setEntries] = useState([{weight: 176, date: '9-22-2022'}, {weight: 177, date: '9-23-2022'}])
   return (
-    <div className="App">
-      <table>
-        <thead>
-          <tr>
-            <th>Entry Number</th> 
-            <th>Weight</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>175</td>
-            <td>9-21-2022</td>
-          </tr>
-        </tbody>
-      </table>
+    <div>
+      <DisplayEntries parentEntries = {entries} />
+
     </div>
   );
 }
